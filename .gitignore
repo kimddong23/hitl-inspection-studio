@@ -1,0 +1,85 @@
+# ── Python ──────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+/dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+.pytest_cache/
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+
+# ── 가상환경 ──────────────────────────────────────────────────────
+.venv/
+venv/
+env/
+ENV/
+.python-version
+
+# ── Streamlit / 런타임 캐시 ───────────────────────────────────────
+.streamlit/cache/
+.streamlit/secrets.toml
+
+# ── 운영자별 로컬 상태 (절대 커밋 X) ──────────────────────────────
+.last_config.json
+hitl_labels.db
+hitl_labels.db-journal
+hitl_labels.db-wal
+hitl_labels.db-shm
+*.sqlite
+*.sqlite3
+
+# ── Export 결과물 (사용자 디스크 한정) ────────────────────────────
+hitl_exports/
+*.zip
+
+# ── 모델 가중치 (NAS 또는 서버에서 직접 로드) ─────────────────────
+*.pt
+*.pth
+*.onnx
+*.torchscript
+
+# ── Custom Component: Frontend ────────────────────────────────────
+polygon_editor/frontend/node_modules/
+polygon_editor/frontend/.vite/
+polygon_editor/frontend/.cache/
+
+# polygon_editor/frontend/dist/ 는 커밋 포함 (Python wrapper 가 사용)
+# package-lock.json 도 커밋 포함 (재현 가능 빌드)
+
+# ── IDE / OS ──────────────────────────────────────────────────────
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ── 임시 ──────────────────────────────────────────────────────────
+*.log
+*.tmp
+*.bak
+~$*
+PROGRESS.md

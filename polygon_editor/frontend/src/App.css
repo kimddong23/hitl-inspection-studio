@@ -1,0 +1,157 @@
+/* Polygon Editor — theme-aware via CSS variables.
+   Default values = dark theme; .pe-root[data-theme="light"] overrides. */
+.pe-root {
+  /* dark defaults (no yellow per memory rule — gray-leaning) */
+  --pe-bg: #0e1219;
+  --pe-panel: #1c2230;
+  --pe-panel-hover: #1d2531;
+  --pe-border: #2c3645;
+  --pe-border-strong: #3a475c;
+  --pe-text: #cfd6dc;
+  --pe-text-strong: #e6edf3;
+  --pe-text-muted: #9aa4b2;
+  --pe-stage-bg: #0e1219;
+  --pe-btn-bg: #131922;
+  --pe-btn-on-bg: #2c6dd6;
+  --pe-btn-on-hover: #2761bf;
+  --pe-btn-on-border: #3b82f6;
+  --pe-danger-border: #6c1a23;
+  --pe-danger-text: #ff7787;
+  --pe-danger-hover-bg: #3a1820;
+  --pe-danger-hover-border: #d1242f;
+  --pe-select-arrow: #9aa4b2;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 4px;
+  font-family: inherit;
+  color: var(--pe-text);
+}
+
+/* Light theme variant — gray-leaning, no yellow */
+.pe-root[data-theme="light"] {
+  --pe-bg: #ffffff;
+  --pe-panel: #f6f8fa;
+  --pe-panel-hover: #eaeef2;
+  --pe-border: #d0d7de;
+  --pe-border-strong: #b1bac4;
+  --pe-text: #262730;
+  --pe-text-strong: #1f2328;
+  --pe-text-muted: #57606a;
+  --pe-stage-bg: #f6f8fa;
+  --pe-btn-bg: #ffffff;
+  --pe-btn-on-bg: #0969da;
+  --pe-btn-on-hover: #0860c2;
+  --pe-btn-on-border: #0969da;
+  --pe-danger-border: #ffaebf;
+  --pe-danger-text: #cf222e;
+  --pe-danger-hover-bg: #ffebe9;
+  --pe-danger-hover-border: #cf222e;
+  --pe-select-arrow: #57606a;
+}
+
+.pe-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 6px 8px;
+  background: var(--pe-panel);
+  border: 1px solid var(--pe-border);
+  border-radius: 8px;
+}
+
+.pe-modes {
+  display: flex;
+  gap: 4px;
+}
+
+.pe-divider {
+  width: 1px;
+  height: 22px;
+  background: var(--pe-border);
+  margin: 0 2px;
+}
+
+.pe-spacer { flex: 0 0 8px; }
+
+.pe-btn {
+  appearance: none;
+  border: 1px solid var(--pe-border);
+  background: var(--pe-btn-bg);
+  color: var(--pe-text);
+  padding: 5px 10px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 500;
+  transition: all 0.15s;
+}
+.pe-btn:hover {
+  background: var(--pe-panel-hover);
+  border-color: var(--pe-border-strong);
+}
+.pe-btn-on {
+  background: var(--pe-btn-on-bg);
+  border-color: var(--pe-btn-on-border);
+  color: #fff;
+}
+.pe-btn-on:hover { background: var(--pe-btn-on-hover); }
+
+.pe-btn-danger {
+  border-color: var(--pe-danger-border);
+  color: var(--pe-danger-text);
+}
+.pe-btn-danger:hover {
+  background: var(--pe-danger-hover-bg);
+  border-color: var(--pe-danger-hover-border);
+  color: #fff;
+}
+
+.pe-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: var(--pe-text-muted);
+}
+
+.pe-select {
+  appearance: none;
+  background: var(--pe-btn-bg);
+  border: 1px solid var(--pe-border);
+  color: var(--pe-text);
+  padding: 4px 22px 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  background-image:
+    linear-gradient(45deg, transparent 50%, var(--pe-select-arrow) 50%),
+    linear-gradient(135deg, var(--pe-select-arrow) 50%, transparent 50%);
+  background-position:
+    calc(100% - 12px) calc(0.5em + 2px),
+    calc(100% - 7px) calc(0.5em + 2px);
+  background-size: 5px 5px;
+  background-repeat: no-repeat;
+}
+
+.pe-stage-wrap {
+  background: var(--pe-stage-bg);
+  border: 1px solid var(--pe-border);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.pe-status {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 6px 10px;
+  background: var(--pe-panel);
+  border: 1px solid var(--pe-border);
+  border-radius: 8px;
+  font-size: 12px;
+  color: var(--pe-text-muted);
+}
+.pe-status b { color: var(--pe-text-strong); font-weight: 600; }

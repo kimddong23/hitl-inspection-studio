@@ -1,0 +1,33 @@
+:root {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: light dark;
+  /* 실제 색은 .pe-root[data-theme] 변수로 결정됨 — base text fallback (양쪽 대응) */
+  color: inherit;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  font-size: 14px;
+}
+
+#root {
+  width: 100%;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+}
+
+select, input, button {
+  font-family: inherit;
+}

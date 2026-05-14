@@ -1,0 +1,10 @@
+[server]
+maxUploadSize = 2000
+maxMessageSize = 2000
+headless = true
+
+[browser]
+gatherUsageStats = false
+
+# 테마: streamlit 우측 상단 ⋮ → Settings → Theme 에서 사용자가 선택
+# (기본은 사용자 OS preference 따라감. 강제값 없음)
